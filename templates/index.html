@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hangman Game{% endblock %}
+
+{% block content %}
+<div id="message-container" class="mt-3"></div>
+
+    <h1 class="mb-4">Hangman Game</h1>
+    <div id="game-container">
+        <button id="start-game-btn" class="btn btn-primary mb-3">Start New Game</button>
+        <div id="word-state" class="mb-3"></div>
+        <div id="guesses-left"></div>
+        <div id="message"></div>
+        <input id="guess-input" class="form-control mt-3" placeholder="Enter a letter">
+        <button id="guess-btn" class="btn btn-success mt-3">Guess</button>
+    </div>
+
+
+    <script src="{% static 'js/hangman.js' %}"></script>
+{% endblock %}
